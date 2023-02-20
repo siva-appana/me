@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "latex";
+  src: url("cmu/cmunbi.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "latex";
+  src: url("cmu/cmunbx.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "latex";
+  src: url("cmu/cmunrm.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "latex";
+  src: url("cmu/cmunti.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+html {
+	background-color: #fdfdfd;
+	font-family: latex;
+}
+
+body {
+	color: #323232;
+	max-width: 60em;
+	margin: 0 auto;
+	width: 90vw;
+	padding-top: 3em;
+	padding-bottom: 2em;
+}
+
+a, .highlighted {
+	color: #256996;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+a:hover {
+	color: #659ABD;
+}
+
+h2 {
+    font-size: 1em;
+    font-style: italic;
+    font-weight: normal;
+    margin-top: 2em;
+}
+
+figure div {
+    display: flex;
+    padding-top: 1em;
+}
+figure div img.one {
+    width: 90%;
+    padding: 0 5%;
+}
+figure div img.two {
+    width: 40%;
+    padding: 1em 5%;
+}
+
+#back {
+    font-size: 2em;
+}
+
+span.box {
+    border: 1px solid #000;
+    padding: 0 0.2em;
+}
