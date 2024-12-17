@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Siva Appana | ME @ GT</title>
+	<title>Balancing a Reuleaux Triangle | Siva Appana</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="../favicon.png" type="image/png"/>
@@ -12,34 +12,56 @@
 </head>
 <body>
 
-<div id="back"><a href="../index.html">&larr;</a></div>
+<div id="back"><a href="../index.html">←</a></div>
 
-<h1>Balancing a Reuleaux Triangular Prism on an Unstable Edge</h1>
+<div class="project-content">
+	<h1>Balancing a Reuleaux Triangular Prism on an Unstable Edge</h1>
 
-<i>We live in a rainbow of chaos.</i><br>
+	<div class="quote-section">
+		<div class="quote">We live in a rainbow of chaos.</div>
+		<div class="attribution">—Paul Cezanne</div>
+	</div>
 
-<span style="float:right">&ndash;Paul Cezanne</span><br><br>
+	<div class="project-section">
+		<p>
+			While taking ME 4012: <i>Modeling and Control of Motion Systems</i>, I worked with Mesum, Martha, and Mannan to mathematically model
+			and balance a Reuleax triangular prism on an inherently unstable edge. The system contained a prismatic body with nominal depth and a 
+			reaction wheel powered by a DC motor. The DC inrunner motor, acquired from a combat robot, was powered by a 6s Lipo battery. During testing, 
+			the motor's RPM capability posed a significant controls challenge due to dead spots present at low current inputs and low RPMs.
+		</p>
+	</div>
 
-<p>
-    While taking ME 4012: <i>Modeling and Control of Motion Systems</i>, I worked with Mesum, Martha, and Mannan to mathematically model
-    and balance a Reuleax triangular prism on an inherently unstable edge. The system contained a prismatic body with nominal depth and a 
-    reaction wheel powered by a DC motor. The <a href="https://www.hobbywingdirect.com/products/xerun-4268-motor-g3">DC inrunner motor</a>, 
-    acquired from a combat robot, was powered by a 6s Lipo battery. During testing, the motor's RPM capability posed a significant controls challenge due
-    to dead spots present at low current inputs and low RPMs.
-    <br><br>
-    An IMU measured the body's angle about it's vertex. The Teensy corrected the angle's error with respect to the vertical axis (parallel to 
-    gravity) by sending an output PWM to the motor. In turn, the reaction wheel rotates to apply a torque opposing the body's rotation. several 
-    mechanical challenges were solved by leveraging 3-D printing. For instance, the friction between the ground and triangle's frame was 
-    initially insufficient, so a fuzzy-skin attachment to the vertex prevented slippage. Finally, a variety of PI, PD, PID, loop-shaping, and 
-    state-space controllers were modeled and tuned on System Controller Designer on MATLAB. After modeling and experimenting, a promising set of 
-    PID parameters became apparent, as shown in the video below.
-</p>
+	<div class="project-section">
+		<p>
+			An IMU measured the body's angle about it's vertex. The Teensy corrected the angle's error with respect to the vertical axis
+			(parallel to gravity) by sending an output PWM to the motor. In turn, the reaction wheel rotates to apply a torque opposing
+			the body's rotation. Several mechanical challenges were solved by leveraging 3-D printing. For instance, the friction between
+			the ground and triangle's frame was initially insufficient, so a fuzzy-skin attachment to the vertex prevented slippage.
+		</p>
+	</div>
 
-<h3>Reuleaux triangle parameter tuning:</h3>
-<iframe width="100%" height="500px" src="https://www.youtube.com/embed/n-IAsmGlTu4?si=Gv1R_3fJomDhkN2C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	<div class="project-section">
+		<p>
+			Finally, a variety of PI, PD, PID, loop-shaping, and state-space controllers were modeled and tuned on System Controller
+			Designer on MATLAB. After modeling and experimenting, a promising set of PID parameters became apparent, as shown in
+			the video below.
+		</p>
+	</div>
 
-<h3>Final presentation:</h3>
-<iframe src="./reuleaux/final_presentation.pdf" width="100%" height="500px"></iframe>
+	<div class="project-section">
+		<h2>Parameter Tuning Demo</h2>
+		<div class="media-container">
+			<iframe width="100%" height="500px" src="https://www.youtube.com/embed/n-IAsmGlTu4" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="project-section">
+		<h2>Final Presentation</h2>
+		<div class="media-container">
+			<iframe src="./reuleaux/final_presentation.pdf" width="100%" height="500px"></iframe>
+		</div>
+	</div>
+</div>
 
 </body>
 </html>

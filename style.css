@@ -3,11 +3,14 @@ html {
 }
 
 body {
-	color: #323232;
-	width: 70em;
-	font-family: Lato, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	color: #2c3e50;
+	width: 90%;
+	max-width: 70em;
+	font-family: 'Inter', Lato, -apple-system, BlinkMacSystemFont, sans-serif;
 	margin: 0 auto;
-	padding-top: 3em;
+	padding: 2em 1em;
+	line-height: 1.6;
+	background-color: #fafafa;
 }
 
 #rotate img {
@@ -45,20 +48,29 @@ body {
 }
 
 #head {
-	font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
-	width: 15em;
-	float: right;
-	position: fixed;
+	font-family: 'Quicksand', sans-serif;
+	width: 100%;
+	max-width: 15em;
+	position: sticky;
+	top: 2em;
+	float: left;
+	margin-right: 2em;
+	height: fit-content;
+	background: white;
+	padding: 2em;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 a, .highlighted {
-	color: #256996;
+	color: #2b6cb0;
 	text-decoration: none;
 	font-weight: 400;
+	transition: color 0.2s ease;
 }
 
 a:hover {
-	color: #659ABD;
+	color: #4299e1;
 }
 
 #head h1 {
@@ -89,12 +101,29 @@ svg.defs-only {
 	filter: url(#aboutColor);
 	-webkit-filter: url(#aboutColor);
 	margin-top: 1.3em;
+	border-radius: 8px;
+	transition: transform 0.2s ease;
+}
+
+#aboutImg:hover {
+	transform: scale(1.02);
 }
 
 #icons {
 	font-size: 3em;
 	text-align: center;
-	margin-top: 1em;
+	margin-top: 1.5em;
+}
+
+#icons a {
+	margin: 0 0.5em;
+	font-size: 1.2em;
+	color: #4a5568;
+	transition: color 0.2s ease;
+}
+
+#icons a:hover {
+	color: #2b6cb0;
 }
 
 #links {
@@ -117,7 +146,8 @@ svg.defs-only {
 
 #content {
 	float: right;
-	width: 50em;
+	width: calc(100% - 19em);
+	margin-left: auto;
 	line-height: 1.8em;
 }
 
@@ -129,8 +159,12 @@ svg.defs-only {
 }
 
 #content h2 {
-	font-family: Quicksand, Helvetica Neue, Helvetica, Tahoma, Verdana, sans-serif;
+	font-family: 'Quicksand', sans-serif;
 	margin-top: 0.5em;
+	font-size: 1.5em;
+	font-weight: 600;
+	border-bottom: 2px solid #e2e8f0;
+	padding-bottom: 0.5em;
 }
 
 #content p, li {
@@ -172,12 +206,32 @@ svg.defs-only {
 }
 
 #content ul.tight-list {
-    list-style-type: circle;
-    padding-left: 2em;
+    list-style: none;
+    padding-left: 0;
+}
+
+#content ul.tight-list li {
+  padding: 0.5em 0;
+  border-bottom: 1px solid #edf2f7;
+}
+
+#content ul.tight-list li:last-child {
+  border-bottom: none;
+}
+
+#content ul li b {
+  color: #2d3748;
+  display: block;
+  margin-bottom: 0.2em;
 }
 
 .section {
 	margin-bottom: 3em;
+	background: white;
+	padding: 2em;
+	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	margin-bottom: 2em;
 }
 
 #labGrid {
@@ -302,7 +356,7 @@ img.deselected {
 }
 
 body.portrait {
-    width: 90%
+    width: 95%;
 }
 
 #questions a {
@@ -333,3 +387,233 @@ body.portrait {
 	color: #92BEDA;
 }
  */
+
+/* Add these styles for project cards */
+.project-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5em;
+  margin-top: 2em;
+}
+
+.project-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card-content {
+  padding: 1.5em;
+}
+
+.project-card h3 {
+  margin: 0 0 0.5em;
+  font-family: 'Quicksand', sans-serif;
+  color: #1a365d;
+}
+
+.project-card .preview {
+  color: #4a5568;
+  font-size: 0.9em;
+  line-height: 1.6;
+  margin-bottom: 1em;
+  display: none;
+}
+
+.project-card.expanded .preview {
+  display: block;
+}
+
+.project-card .read-more {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #2b6cb0;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background 0.2s ease;
+  margin-top: 1em;
+}
+
+.project-card .read-more:hover {
+  background: #4299e1;
+}
+
+@media (max-width: 1200px) {
+  #head {
+    position: relative;
+    float: none;
+    top: 0;
+    max-width: 100%;
+    margin: 0 auto 2em auto;
+    text-align: center;
+  }
+
+  #head h1, #head h2 {
+    float: none;
+    text-align: center;
+  }
+
+  #aboutImg {
+    margin: 1.3em auto;
+    display: block;
+  }
+
+  #content {
+    float: none;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img {
+    height: 180px;
+  }
+
+  .section {
+    padding: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 1.2em;
+    margin-bottom: 1.5em;
+  }
+
+  #content ul.tight-list li {
+    padding: 0.8em 0;
+  }
+
+  .project-card-content {
+    padding: 1.2em;
+  }
+}
+
+/* Ensure proper spacing in main container */
+#main {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 2em 1em;
+}
+
+@media (max-width: 1200px) {
+    #main {
+        flex-direction: column;
+    }
+}
+
+/* Update publication styling */
+#content ul li b {
+  color: #2d3748;
+  display: block;
+  margin-bottom: 0.2em;
+}
+
+/* Add specific styling for publication items */
+#content ul li.publication {
+  margin-top: 1.2em;
+  line-height: 1.6;
+}
+
+#content ul li.publication:first-child {
+  margin-top: 0;
+}
+
+/* Award item styling */
+.award-item {
+    cursor: pointer;
+    padding: 0.7em 1em;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.award-item:last-child {
+    border-bottom: none;
+}
+
+.award-title {
+    font-weight: 400;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    color: #2d3748;
+}
+
+.award-description {
+    display: none;
+    margin-top: 0.7em;
+    padding: 0.7em;
+    background-color: #f7fafc;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #4a5568;
+    line-height: 1.5;
+    width: 100%;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.2s ease;
+}
+
+.award-item.expanded {
+    background-color: #f7fafc;
+    margin: 0.3em 0;
+}
+
+.award-item.expanded .award-description {
+    display: block;
+    opacity: 1;
+    max-height: 200px;
+}
+
+.award-item .expand-icon {
+    color: #718096;
+    transition: transform 0.2s ease;
+    font-size: 0.7em;
+    margin-left: 0.5em;
+}
+
+.award-item.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Update the awards section specific styling */
+.awards-section {
+    padding: 1.5em !important;
+}
+
+.awards-section .tight-list {
+    margin: 0;
+}
+
+.awards-section .tight-list li {
+    padding: 0;
+    margin: 0;
+}

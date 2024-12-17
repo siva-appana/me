@@ -32,12 +32,16 @@ html {
 }
 
 body {
-	color: #323232;
-	max-width: 60em;
+	color: #2c3e50;
+	width: 95%;
+	max-width: 800px;
 	margin: 0 auto;
-	width: 90vw;
-	padding-top: 3em;
-	padding-bottom: 2em;
+	padding: 2em;
+	background-color: #fafafa;
+	line-height: 1.6;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 a, .highlighted {
@@ -60,21 +64,198 @@ h2 {
 figure div {
     display: flex;
     padding-top: 1em;
+    gap: 1em;
+    margin: 1.5em 0;
 }
 figure div img.one {
     width: 90%;
     padding: 0 5%;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
 }
 figure div img.two {
     width: 40%;
     padding: 1em 5%;
+    border-radius: 4px;
+    transition: transform 0.2s ease;
 }
 
 #back {
     font-size: 2em;
+    margin-bottom: 2em;
+}
+
+#back a {
+    color: #4a5568;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.2s ease;
+}
+
+#back a:hover {
+    color: #2b6cb0;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #1a365d;
+    margin: 0 0 1em 0;
+    line-height: 1.2;
+}
+
+.project-content {
+    flex: 1;
+    background: white;
+    padding: 3em;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-top: 1em;
+}
+
+img, video, iframe {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin: 1em 0;
+}
+
+blockquote {
+    border-left: 4px solid #4299e1;
+    margin: 1.5em 0;
+    padding-left: 1em;
+    color: #4a5568;
+    font-style: italic;
 }
 
 span.box {
     border: 1px solid #000;
     padding: 0 0.2em;
+}
+
+figure div img.one:hover,
+figure div img.two:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1.5em;
+  }
+
+  .project-content {
+    padding: 2em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  figure div {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  figure div img.one,
+  figure div img.two {
+    width: 100%;
+    padding: 0;
+  }
+
+  blockquote {
+    margin: 1.2em 0;
+    padding-left: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  #back {
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  .project-content {
+    padding: 1.5em;
+  }
+
+  h2 {
+    margin-top: 1.5em;
+  }
+}
+
+/* Style the quote section */
+.quote-section {
+    border-left: 4px solid #4299e1;
+    padding: 1em 0 1em 2em;
+    margin: 2em 0;
+    color: #4a5568;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.attribution {
+    text-align: right;
+    color: #718096;
+}
+
+/* Style project sections */
+.project-section {
+    margin: 2.5em 0;
+}
+
+.project-section:first-of-type {
+    margin-top: 3em;
+}
+
+.project-section h2 {
+    font-family: 'Quicksand', sans-serif;
+    color: #1a365d;
+    font-size: 1.5em;
+    margin: 0 0 1em 0;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.project-section p {
+    margin: 1em 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Style media elements */
+.media-container {
+    margin: 2em 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.media-container img,
+.media-container video,
+.media-container iframe {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: block;
+    margin: 0;
+}
+
+/* Update back button */
+#back {
+    margin: 1em 0;
+}
+
+#back a {
+    display: inline-flex;
+    align-items: center;
+    color: #2b6cb0;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: transform 0.2s ease;
+}
+
+#back a:hover {
+    transform: translateX(-4px);
 }
