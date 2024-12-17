@@ -545,52 +545,51 @@ body.portrait {
 
 /* Award item styling */
 .award-item {
+    background: white;
+    border-radius: 8px;
+    padding: 1.2em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
     cursor: pointer;
-    padding: 0.7em 1em;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    border-bottom: 1px solid #edf2f7;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1em;
+}
+
+.award-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .award-item:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .award-title {
-    font-weight: 400;
     margin: 0;
-    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: #1a365d;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 0.9em;
-    color: #2d3748;
 }
 
 .award-description {
-    display: none;
-    margin-top: 0.7em;
-    padding: 0.7em;
-    background-color: #f7fafc;
-    border-radius: 4px;
-    font-size: 0.85em;
     color: #4a5568;
-    line-height: 1.5;
-    width: 100%;
-    opacity: 0;
-    max-height: 0;
-    transition: all 0.2s ease;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-top: 0.8em;
+    display: none;
 }
 
 .award-item.expanded {
-    background-color: #f7fafc;
-    margin: 0.3em 0;
+    background: white;
 }
 
 .award-item.expanded .award-description {
     display: block;
     opacity: 1;
-    max-height: 200px;
+    max-height: none;
+    background: none;
+    padding: 0;
 }
 
 .award-item .expand-icon {
@@ -604,16 +603,67 @@ body.portrait {
     transform: rotate(180deg);
 }
 
-/* Update the awards section specific styling */
+/* Update the awards section styling */
 .awards-section {
-    padding: 1.5em !important;
+    padding: 2em !important;
 }
 
 .awards-section .tight-list {
     margin: 0;
+    padding: 0;
 }
 
 .awards-section .tight-list li {
     padding: 0;
     margin: 0;
+    border: none;
+}
+
+/* Add after the existing project-card styles */
+
+.project-card-text {
+    background: white;
+    border-radius: 8px;
+    padding: 1.2em;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    margin-bottom: 1em;
+}
+
+.project-card-text:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project-card-text h3 {
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    color: #1a365d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card-text .preview {
+    color: #4a5568;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin-top: 0.8em;
+    display: none;
+}
+
+.project-card-text.expanded .preview {
+    display: block;
+}
+
+.project-card-text .expand-icon {
+    color: #718096;
+    transition: transform 0.2s ease;
+    font-size: 0.7em;
+    margin-left: 0.5em;
+}
+
+.project-card-text.expanded .expand-icon {
+    transform: rotate(180deg);
 }

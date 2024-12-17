@@ -1,64 +1,82 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Siva Appana | ME @ GT</title>
+	<title>Insaniti - 3lb Combat Robot | Siva Appana</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="shortcut icon" href="../favicon.png" type="image/png"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./projectstyle.css">
 </head>
 <body>
+	<div id="back"><a href="../index.html">←</a></div>
 
-<div id="back"><a href="../index.html">&larr;</a></div>
+	<div class="project-content">
+		<h1>Insaniti: Beetleweight (3lb) BattleBot</h1>
 
-<h1>Insaniti: Beetleweight (3lb) BattleBot</h1>
+		<div class="quote-section">
+			<div class="quote">Testing materials, design structures, and electrical components to their limits</div>
+			<div class="attribution">—Combat Robotics Philosophy</div>
+		</div>
 
-<p>
-    Various materials, design structures, and electrical components are tested to the maximum as one robot attempts to disable the opposing robot in a strongly
-    armored box. Generally, robots are fitted with motor-power weapons and wheels to win a battle of control, strategy, and durability. As my first structurally
-    challenging project in college, I was tasked to work with my team - J. Peavey, T. Haveliwala, D. Li, G. Tunnicliffe - to construct a 3-lb BattleBot.
-    <br>
-    <br>
-    To begin, my team and I developed a strategy where we construct a weapon that theoretically disables the opposing robot after the first collision. Accordingly,
-    we developed a vertical-disk with two hitting edges and a large moment of inertia. The specifications of the initial design are outlined in the presentation below.
-</p>
+		<div class="project-section">
+			<p>
+				Various materials, design structures, and electrical components are tested to the maximum as one robot attempts to disable the opposing robot in a strongly
+				armored box. Generally, robots are fitted with motor-power weapons and wheels to win a battle of control, strategy, and durability. As my first structurally
+				challenging project in college, I was tasked to work with my team - J. Peavey, T. Haveliwala, D. Li, G. Tunnicliffe - to construct a 3-lb BattleBot.
+			</p>
+		</div>
 
-<iframe src="https://gtvault-my.sharepoint.com/personal/sappana6_gatech_edu/_layouts/15/Doc.aspx?sourcedoc={3abeff53-7ac5-4ce3-9251-fafa55e0dd50}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="100%" height="500px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+		<div class="project-section">
+			<h2>Initial Design</h2>
+			<div class="media-container">
+				<iframe src="https://gtvault-my.sharepoint.com/personal/sappana6_gatech_edu/_layouts/15/Doc.aspx?sourcedoc={3abeff53-7ac5-4ce3-9251-fafa55e0dd50}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="100%" height="500px" frameborder="0"></iframe>
+			</div>
+			<p>
+				To begin, my team and I developed a strategy where we construct a weapon that theoretically disables the opposing robot after the first collision. Accordingly,
+				we developed a vertical-disk with two hitting edges and a large moment of inertia. The specifications of the initial design are outlined in the presentation above.
+			</p>
+		</div>
 
-<p>
-    To optimize the kinetic energy imparted on the opposing robot, the weapon must have a high angular velocity but must have a minimal spin-up time to evade damage
-    from the opposing robot. To model the motor's spin-up time based on the viscous friction coefficient and the kV value, I worked with V. Madabushi to develop this <a href src="./insaniti/motorKvTesting.m">MATLAB code</a> 
-    that calculates the weapon's angular velocity and kinetic energy at time <i>t</i>, assuming that the weapon starts at rest. Based on the data from our model,
-    we identified the appropriate motor KV for our application to be 1100 kV.
-    <br>
-    <br>
-    Using the RoboJacket's budget, we ordered the electrical components, necessary stock, and selected McMaster hardware to fabricate the robot. Simultaneously, RoboJackets senior members trained
-    my team and I to use metal fabrication tools such as the manual mill, manual lathe, horizontal bandsaw, and electrical tools (e.g. soldering irons, heat guns, etc.).
-    Once the raw materials arrived, we started machining the parts and assembling components. After 1.5 months, we were able to completely assemble our robot and spin-up
-    our weapon. Upon turning on our robot, we realized the robot's center of mass is too far in front of the wheels, resulting in a high friction force between the floor
-    and our robot's skids. Unfortunately, our robot already weighed 3-lbs, so we were not able to attach bearings effectively to the skids in time.
-</p>
+		<div class="project-section">
+			<h2>Design Optimization</h2>
+			<p>
+				To optimize the kinetic energy imparted on the opposing robot, the weapon must have a high angular velocity but must have a minimal spin-up time to evade damage
+				from the opposing robot. To model the motor's spin-up time based on the viscous friction coefficient and the kV value, I worked with V. Madabushi to develop this <a href src="./insaniti/motorKvTesting.m">MATLAB code</a> 
+				that calculates the weapon's angular velocity and kinetic energy at time <i>t</i>, assuming that the weapon starts at rest. Based on the data from our model,
+				we identified the appropriate motor KV for our application to be 1100 kV.
+			</p>
+		</div>
 
-<img src="./insaniti/Image from iOS.jpg" width="100%">
+		<div class="project-section">
+			<h2>Construction</h2>
+			<div class="media-container">
+				<img src="./insaniti/Image from iOS.jpg" alt="Insaniti Robot">
+			</div>
+			<p>
+				Using the RoboJacket's budget, we ordered the electrical components, necessary stock, and selected McMaster hardware to fabricate the robot. Simultaneously, RoboJackets senior members trained
+				my team and I to use metal fabrication tools such as the manual mill, manual lathe, horizontal bandsaw, and electrical tools (e.g. soldering irons, heat guns, etc.).
+				Once the raw materials arrived, we started machining the parts and assembling components. After 1.5 months, we were able to completely assemble our robot and spin-up
+				our weapon. Upon turning on our robot, we realized the robot's center of mass is too far in front of the wheels, resulting in a high friction force between the floor
+				and our robot's skids. Unfortunately, our robot already weighed 3-lbs, so we were not able to attach bearings effectively to the skids in time.
+			</p>
+		</div>
 
-<p>
-    For our competition, several RoboJackets teams drove to Pennsylvania to compete in the BattleBots competition at Motorama. During our first two rounds, we encountered
-    electrical issues: our button was stripped. We were unable to turn on the robot, so we were disqualified. The next day, we challenged one of the semifinalists to battle
-    against us, so we were able to test our weapon. During the fight, I learned that the floor conditions were sub-optimal for our robot design and limited movement further,
-    and I learned that clearance from the ground must be minimized. However, we were able to determine that our robot is durable since it remained unscathed.
-</p>
-
-<iframe width="100%" height="600px" src="https://www.youtube.com/embed/TnmIEZADxlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-
-
-
-
-
-
+		<div class="project-section">
+			<h2>Competition</h2>
+			<div class="media-container">
+				<iframe width="100%" height="600px" src="https://www.youtube.com/embed/TnmIEZADxlk" allowfullscreen></iframe>
+			</div>
+			<p>
+				For our competition, several RoboJackets teams drove to Pennsylvania to compete in the BattleBots competition at Motorama. During our first two rounds, we encountered
+				electrical issues: our button was stripped. We were unable to turn on the robot, so we were disqualified. The next day, we challenged one of the semifinalists to battle
+				against us, so we were able to test our weapon. During the fight, I learned that the floor conditions were sub-optimal for our robot design and limited movement further,
+				and I learned that clearance from the ground must be minimized. However, we were able to determine that our robot is durable since it remained unscathed.
+			</p>
+		</div>
+	</div>
 </body>
 </html>
